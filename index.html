@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7be631d0f4a393c9742219cfae998940d9c90230
 <head>
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
 </head>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7be631d0f4a393c9742219cfae998940d9c90230
 <body>
 
 
@@ -59,6 +65,7 @@
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
 
+<<<<<<< HEAD
   <script>
     const playSound = (e) => {
       const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
@@ -86,3 +93,33 @@
 </body>
 
 </html>
+=======
+<script>
+ 
+  const playSound = (e) => {
+    const key = document.querySelector(`div[data-key="${e.keyCode}"`);
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"`);
+    if(!audio) return;
+    
+    // console.log(key);
+    // console.log(audio);
+    key.classList.add('playing');
+    audio.play();
+    console.log(audio.play());
+
+  }
+  document.addEventListener('keydown', playSound);
+
+  const remove = (e) => {
+    const key = document.querySelector(`div[data-key="${e.keyCode}"`);
+    if(!key) return;
+    key.classList.remove('playing');
+  }
+  document.addEventListener('keyup', remove);
+
+</script>
+
+
+</body>
+</html>
+>>>>>>> 7be631d0f4a393c9742219cfae998940d9c90230
